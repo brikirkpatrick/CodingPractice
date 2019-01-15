@@ -5734,11 +5734,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bkirkpatrick\\source\\repos\\CodingPractice\\Practice\\Practice\\Practice.csproj",
+      "projectUniqueName": "C:\\Users\\bkirkpatrick\\source\\repos\\CodingPractice\\Practice\\Practice.csproj",
       "projectName": "Practice",
-      "projectPath": "C:\\Users\\bkirkpatrick\\source\\repos\\CodingPractice\\Practice\\Practice\\Practice.csproj",
+      "projectPath": "C:\\Users\\bkirkpatrick\\source\\repos\\CodingPractice\\Practice\\Practice.csproj",
       "packagesPath": "C:\\Users\\bkirkpatrick\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bkirkpatrick\\source\\repos\\CodingPractice\\Practice\\Practice\\obj\\",
+      "outputPath": "C:\\Users\\bkirkpatrick\\source\\repos\\CodingPractice\\Practice\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
