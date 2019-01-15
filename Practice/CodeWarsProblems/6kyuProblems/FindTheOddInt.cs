@@ -1,12 +1,14 @@
-﻿using System;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Practice.CodeWarsProblems._6kyuProblems
 {
-    //https://www.codewars.com/kata/54da5a58ea159efa38000836
+    [TestClass]
     public class FindTheOddInt
     {
+        //https://www.codewars.com/kata/54da5a58ea159efa38000836
         public static int find_it(int[] seq)
         {
             Dictionary<int, int> map = new Dictionary<int, int>();
@@ -36,6 +38,13 @@ namespace Practice.CodeWarsProblems._6kyuProblems
             }
 
             return oddKey;
+        }
+
+        [TestMethod]
+        [TestCategory("6kyu")]
+        public void FindTheOddIntTest()
+        {
+            Assert.AreEqual(5, find_it(new[] { 20, 1, -1, 2, -2, 3, 3, 5, 5, 1, 2, 4, 20, 4, -1, -2, 5 }));
         }
     }
 }

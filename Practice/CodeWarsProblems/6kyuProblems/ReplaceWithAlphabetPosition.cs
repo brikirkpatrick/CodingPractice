@@ -1,43 +1,38 @@
-﻿using System;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 //TODO: Incomplete
 namespace Practice.CodeWarsProblems._6kyuProblems
 {
-    //https://www.codewars.com/kata/546f922b54af40e1e90001da
-    class ReplaceWithAlphabetPosition
+    [TestClass]
+    public class ReplaceWithAlphabetPosition
     {
-        public static string AlphabetPosition(string text) //text
+        //https://www.codewars.com/kata/546f922b54af40e1e90001da
+        public static string AlphabetPosition(string text)
         {
+            Dictionary<String, int> alphabet = InitStringDictionary();
+            string formattedText = text.ToUpper().Replace(" ", "");
+            string updatedText = String.Empty;
 
-            Dictionary<String, int> alphabet = new Dictionary<String, int>();
-            string uppercaseText = text.ToUpper();
-            var noSpaces = uppercaseText.Replace(" ", "");
-            Console.WriteLine("Empty Spaces: " + uppercaseText);
-            string updatedString = String.Empty;
-            alphabet = InitStringDictionary();
-
-            for (int i = 0; i < noSpaces.Length; i++)
+            for (int i = 0; i < formattedText.Length; i++)
             {
-                Console.WriteLine("ArrayValue: " + noSpaces[i]);
-                if (alphabet.ContainsKey(noSpaces[i].ToString())) //i = 1, arrayOfText[i] = t
+                Console.WriteLine("Assessing value: " + formattedText[i]);
+                if (alphabet.ContainsKey(formattedText[i].ToString()))
                 {
-                    int value = alphabet[noSpaces[i].ToString()];
-                    String updatedChar = value.ToString(); //BAD
+                    Console.WriteLine("Hit Value: " + formattedText[i]);
+                    int value = alphabet[formattedText[i].ToString()];
+                    String updatedChar = value.ToString();
+                    updatedText += updatedChar + " "; //TODO: Do this better.
 
-                    //updatedString = uppercaseText.Replace(uppercaseText[i].ToString(), updatedChar);
-                    //if(i != noSpaces.Length)
-                    updatedString += updatedChar + " ";
-                    //else 
-                    //updatedString += updatedChar;
-                    Console.WriteLine("ValueAfter " + updatedChar);
-                    Console.WriteLine("New String in loop " + updatedString);
+                    Console.WriteLine("Updated to: " + updatedChar);
+                    Console.WriteLine("New String in loop: " + updatedText);
                 }
             }
 
-            Console.WriteLine("New String " + updatedString);
-            return updatedString.Trim();
+            Console.WriteLine($"Final Answer: {updatedText}");
+            return updatedText.Trim();
         }
 
         public static Dictionary<String, int> InitStringDictionary()
@@ -51,6 +46,13 @@ namespace Practice.CodeWarsProblems._6kyuProblems
             }
 
             return map;
+        }
+
+        [TestMethod]
+        [TestCategory("6kyu")]
+        public void ReplaceWithAlphabetPositionTest()
+        {
+            //TODO: Create test...
         }
     }
 }
