@@ -6,10 +6,10 @@ using System.Text;
 
 namespace Practice.CodeWarsProblems._7kyuProblems
 {
+    //https://www.codewars.com/kata/57cebe1dc6fdc20c57000ac9/train/csharp
     [TestClass]
     public class ShortestWord
     {
-        //https://www.codewars.com/kata/57cebe1dc6fdc20c57000ac9/train/csharp
         public static int FindShortWithLinq(string s)
         {
             return s.Split().OrderBy(w => w.Length).First().Length;

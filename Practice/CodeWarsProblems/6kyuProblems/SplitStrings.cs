@@ -9,7 +9,7 @@ namespace Practice.CodeWarsProblems._6kyuProblems
     [TestClass]
     public class SplitStrings
     {
-        public static string[] SplitStringbuilder(string str)
+        public static string[] SplitString(string str)
         {
             List<string> tempList = new List<string>();
 
@@ -35,7 +35,7 @@ namespace Practice.CodeWarsProblems._6kyuProblems
         {
 
             var expected = new string[] { "ab", "cd", "ef", "g_" };
-            var actual = SplitStringbuilder("abcdefg");
+            var actual = SplitString("abcdefg");
 
             CollectionAssert.AreEqual(expected, actual);
         }

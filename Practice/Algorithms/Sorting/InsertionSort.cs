@@ -5,11 +5,11 @@ using System.Text;
 
 namespace Practice.Algorithms.Sorting
 {
+    //https://www.geeksforgeeks.org/insertion-sort/
     [TestClass]
     public class InsertionSort
     {
         //TODO: Reattempt this until I can recreate this without help.
-        //https://www.geeksforgeeks.org/insertion-sort/
         public int[] Sort(int[] arr)
         {
             for (int i = 0; i < arr.Length; i++)
