@@ -39,3 +39,4 @@ C:\Users\bkirkpatrick\source\repos\CodingPractice\Practice\obj\Debug\netcoreapp2
 C:\Users\bkirkpatrick\source\repos\CodingPractice\Practice\obj\Debug\netcoreapp2.0\Practice.AssemblyInfo.cs
 C:\Users\bkirkpatrick\source\repos\CodingPractice\Practice\obj\Debug\netcoreapp2.0\Practice.dll
 C:\Users\bkirkpatrick\source\repos\CodingPractice\Practice\obj\Debug\netcoreapp2.0\Practice.pdb
+C:\Users\bkirkpatrick\source\repos\CodingPractice\Practice\obj\Debug\netcoreapp2.0\Practice.csprojAssemblyReference.cache

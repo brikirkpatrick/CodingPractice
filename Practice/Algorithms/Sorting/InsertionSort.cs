@@ -8,14 +8,10 @@ namespace Practice.Algorithms.Sorting
     [TestClass]
     public class InsertionSort
     {
-        //TODO: Complete and understand.
+        //TODO: Reattempt this until I can recreate this without help.
         //https://www.geeksforgeeks.org/insertion-sort/
         public int[] Sort(int[] arr)
         {
-            /**
-            * 1. if i > 1 to n then stay.
-            * 2. if i < 1 to n then move to proper position
-            */
             for (int i = 0; i < arr.Length; i++)
             {
                 Console.Write($"{i} - {arr[i]}. ");
@@ -31,21 +27,44 @@ namespace Practice.Algorithms.Sorting
                 Console.WriteLine();
             }
 
-            /**
-                0 - 5. 5 6 3 6 
-                1 - 6. 5 6 3 6 
-                2 - 3. 5 6 3 6 
-                3 - 6. 5 6 3 6
-             */
-
             return null;
+        }
+
+        public int[] SortOfficial(int[] arr)
+        {
+            string start = string.Join("", arr);
+            Console.WriteLine(start);
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                int key = arr[i];
+                int j = i - 1;
+
+                Console.WriteLine($"Next Index. j: {j}, key: {key}");
+
+                while(j >= 0 && arr[j] > key)
+                {
+                    Console.WriteLine($"Hit. j: {j}, arr[j]: {arr[j]}, key: {key}");
+                    arr[j + 1] = arr[j];
+                    j = j - 1;
+                }
+                Console.WriteLine($"End Index.  arr[j + 1] = key: {arr[j + 1]} = {key} \n");
+                arr[j + 1] = key;
+            }
+            return arr;
         }
 
         [TestMethod]
         [TestCategory("Sorting")]
         public void InsertionSortTest()
         {
-            Console.WriteLine(Sort(new[] {5, 6, 3, 6}));
+            int[] unsortedArr = SortOfficial(new[] { 5, 6, 3, 6, 1, 8, 9, 0 });
+            int[] sortedArr = new int[] { 0, 1, 3, 5, 6, 6, 8, 9 };
+
+            string result = string.Join("", unsortedArr);
+            Console.WriteLine(result);
+
+            CollectionAssert.AreEqual(sortedArr, unsortedArr);
         }
     }
 }
