@@ -9,10 +9,22 @@ namespace Practice.CodeWarsProblems._7kyuProblems
     [TestClass]
     public class Fibonacci
     {
-        public static int fib(int n)
+        //returns n'th element of Fibonacci sequence (classic programming task).
+        //0, 1, 1, 2, 3, 5, 8, 13, 21, 34....
+        public static int fib(int n) //n=3, return 2
         {
-            // your code here!
-            return 0;
+            int count = 0;
+            int value = 0;
+
+            if (n == count)
+            {
+                return value;
+            }
+            else
+            {
+
+                return value;
+            }
         }
 
         [TestMethod]
